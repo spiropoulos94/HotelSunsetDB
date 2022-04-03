@@ -84,3 +84,10 @@ CREATE TABLE Facilities (
     DailyPrice int,
     PRIMARY KEY (FacilityID)
 );
+
+CREATE TABLE Rooms_Facilities (
+    RoomID int,
+    FacilityID int,
+    FOREIGN KEY (RoomID) REFERENCES Rooms(RoomID),
+    FOREIGN KEY (FacilityID) REFERENCES Facilities(FacilityID)
+);
